@@ -4,13 +4,13 @@
 import sys
 import os
 from PyQt4 import QtGui, QtCore
-import tempSensor01 as Temp 
-import adcTest02 as AdcTemp
+import tempSensor as Temp 
+import ADC_ADS1x15 as ADC
 
 #Temp Sensoren
 maischeTemp = Temp.TempSensor("28-0000072fbb7d")
 nachgussTemp = Temp.TempSensor("28-0000072e5bab")
-pkTemp = AdcTemp.NTCsensor()
+pkTemp = ADC.NTCsensor()
 
 
 class Window(QtGui.QWidget):
