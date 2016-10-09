@@ -1,2 +1,2 @@
 # seebier
-brewery computing device
+brew computing device
