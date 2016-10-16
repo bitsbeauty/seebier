@@ -37,8 +37,9 @@ GAIN = 1
 class NTCsensor():
 	"""docstring for NTCsensor"""
 	
-	def __init__(self):
+	def __init__(self, _pin):
 		# super(NTCsensor, self).__init__()
+		self.pin = _pin
 		self.B = 3914.76611887
 		self.T0 = 25    #// Nenntemperatur des NTC-Widerstands in C
 		self.R0 = 2251 #// Nennwiderstand des NTC-Sensors in Ohm
@@ -71,7 +72,7 @@ class NTCsensor():
 		return self.temp
 
 	def readTemp(self):
-		aValue = adc.read_adc(3, gain=GAIN)
+		aValue = adc.read_adc(self.pin, gain=GAIN)
 		 
 		#// Berechnen bei bekannter Materialkonstante 3914.76611887
 		self.temp = self.temperature_NTCB(aValue/self.MAXANALOGREAD)

@@ -10,7 +10,7 @@ import ADC_ADS1x15 as ADC
 #Temp Sensoren
 maischeTemp = Temp.TempSensor("28-0000072fbb7d")
 nachgussTemp = Temp.TempSensor("28-0000072e5bab")
-pkTemp = ADC.NTCsensor()
+pkTemp = ADC.NTCsensor(3)
 
 
 class Window(QtGui.QWidget):
