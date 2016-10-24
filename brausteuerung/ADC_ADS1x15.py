@@ -128,7 +128,7 @@ if __name__ == '__main__':
 		# print "B=",B
 		# #B= 3914.76611887
 
-		tempNtc = NTCsensor()
+		tempNtc = NTCsensor(0)
 
 		while True:
 			tempNtc.readTemp()
