@@ -80,7 +80,13 @@ class NTCsensor():
 
 	def temp_str(self):
 		self.readTemp()
-		return str(round(self.temp,1))+u"\u00b0"
+		# print self.temp # -74.706370654
+		if round(self.temp,3) == -74.706:
+			#print "not pluged"
+			return "-"
+		else:
+			#print "plugged"
+			return str(round(self.temp,1))+u"\u00b0"
 
 
 
